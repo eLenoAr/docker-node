@@ -1,4 +1,4 @@
-FROM alpine:3.8
+FROM alpine:3.9
 
 ENV NODE_VERSION 10.15.0
 
@@ -16,6 +16,9 @@ RUN addgroup -g 1000 node \
         linux-headers \
         make \
         python \
+        mongodb-tools \
+        mongodb \
+        py-pip \
   # gpg keys listed at https://github.com/nodejs/node#release-keys
   && for key in \
     94AE36675C464D64BAFA68DD7434390BDBE9B9C5 \
